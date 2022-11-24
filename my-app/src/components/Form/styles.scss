@@ -1,0 +1,17 @@
+form {
+  display: flex;
+}
+
+.pZipCode {
+  text-shadow: 0.1em 0.1em 0.1em black;
+  color: white;
+  font-size: large;
+  margin: 0em;
+}
+
+.inputZipCode {
+  margin-left: 0.3em;
+  &:focus {
+    box-shadow: 0.1em 0.1em 0.1em black;
+  }
+}
