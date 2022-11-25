@@ -14,7 +14,8 @@ const authMiddelware = (store:any) => (next:any) => async (action:any) => {
       axios.get(
         `https://api.openweathermap.org/data/2.5/weather?zip=${user.zipCode},fr&appid=${API_KEY}&units=metric&lang=fr`,
       ).then((response) => {
-        store.dispatch(actionAuthentSuccess(response.data.main.temp, response.data.weather[0].icon, response.data.weather[0].description, response.data.name, user.zipCode,))
+        const tempRound = Math.round(response.data.main.temp);
+        store.dispatch(actionAuthentSuccess(tempRound, response.data.weather[0].icon, response.data.weather[0].description, response.data.name, user.zipCode,))
       }).catch((error) => {
         console.log(error);
         /* store.dispatch(actionSetAuthentError()); */
