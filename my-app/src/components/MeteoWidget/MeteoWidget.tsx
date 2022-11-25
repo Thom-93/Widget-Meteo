@@ -1,25 +1,20 @@
-/* import axios from 'axios'; */
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { actionAuthentSuccess } from '../../actions/user';
-import store from '../../store/store';
 import './styles.scss';
 
 interface meteoWidgetProps {
   city: string,
-  zipcode: string,
+  zipCode: string,
   temperature: any,
   icon: any,
   desc: any,
 };
 
-function MeteoWidget({ city, zipcode, temperature, icon, desc }: meteoWidgetProps) {
+function MeteoWidget({ city, zipCode, temperature, icon, desc }: meteoWidgetProps) {
 
   return (
     <div className="meteo">
       <div>
         <div className="meteo-city">{city}</div>
-        <div className="meteo-code">{zipcode}</div>
+        <div className="meteo-code">{zipCode}</div>
         <div className="meteo-temperature">
         <p>{temperature}°C</p>
         </div>

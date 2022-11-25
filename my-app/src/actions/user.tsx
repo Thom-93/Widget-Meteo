@@ -34,7 +34,7 @@ export function actionCheckZipCode(zipCode:string) {
   };
 }
 
-export function actionAuthentSuccess(temperature:any, icon:any, desc:any, city:string) {
+export function actionAuthentSuccess(temperature:any, icon:any, desc:any, city:string, zipCodeFix:string,) {
   return {
     type: AUTHENT_SUCCESS,
     payload: {
@@ -42,6 +42,7 @@ export function actionAuthentSuccess(temperature:any, icon:any, desc:any, city:s
       icon,
       desc,
       city,
+      zipCodeFix,
     },
   };
 }

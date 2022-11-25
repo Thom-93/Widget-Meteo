@@ -9,7 +9,6 @@ function Form({ zipCode , changeField, }:{ zipCode:string; changeField:any; }) {
 
   const handleSubmit = (event:any) => {
     event.preventDefault();
-    console.log('envoyer');
     dispatch(actionCheckAuthent());
   };
 

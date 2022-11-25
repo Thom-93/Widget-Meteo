@@ -26,6 +26,8 @@ const reducer = (state = initialState, action:any ) => {
         */
         return {
           ...state,
+          zipCodeFix: action.payload.zipCodeFix,
+          city: action.payload.city,
           temperature: action.payload.temperature,
           icon: action.payload.icon,
           desc: action.payload.desc,

@@ -19,8 +19,8 @@ const authMiddelware = (store:any) => (next:any) => async (action:any) => {
         `https://api.openweathermap.org/data/2.5/weather?zip=${user.zipCode},fr&appid=${API_KEY}&units=metric&lang=fr`,
       ).then((response) => {
         store.dispatch(actionCheckZipCode(response.data));
-        store.dispatch(actionAuthentSuccess(response.data.main.temp, response.data.weather[0].icon, response.data.weather[0].description, response.data.name))
-        console.log(response.data);
+        store.dispatch(actionAuthentSuccess(response.data.main.temp, response.data.weather[0].icon, response.data.weather[0].description, response.data.name, user.zipCode))
+        console.log(response);
       }).catch((error) => {
         console.log(error);
         /* store.dispatch(actionSetAuthentError()); */
