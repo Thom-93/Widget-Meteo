@@ -1,5 +1,6 @@
 form {
   display: flex;
+  justify-content: center;
 }
 
 .pZipCode {
@@ -9,9 +10,10 @@ form {
   margin: 0em;
 }
 
-.inputZipCode {
-  margin-left: 0.3em;
-  &:focus {
-    box-shadow: 0.1em 0.1em 0.1em black;
-  }
+.buttonZipCode {
+    border: thin;
+    background: content-box;
+    border-style: dashed;
+    border-radius: 0.3em;
+    border-bottom: double;
 }

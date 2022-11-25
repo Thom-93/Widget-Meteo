@@ -1,10 +1,10 @@
 @media only screen and (min-width: 800px) {
-  .App {
-    width: 50%;
-    justify-content: inherit;
+  .sectionMeteoWidget {
+    margin: auto 30em;
   }
 }
-.App {
+.sectionMeteoWidget {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }

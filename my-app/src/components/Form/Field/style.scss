@@ -1,0 +1,10 @@
+.inputZipCode {
+  background: center;
+  border: none;
+  text-align: center;
+  border-bottom-style: double;
+  margin-left: .5em;
+  &:focus {
+    border: none;
+  }
+}

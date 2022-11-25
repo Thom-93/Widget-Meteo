@@ -1,6 +1,6 @@
 .meteo {
   margin: 1.5rem 1rem;
-  max-width: 280px;
+  max-width: 290px;
   box-shadow: 0.1em 0.1em 0.1em white;
   text-shadow: 0.1em 0.1em 0.1em black;
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -39,8 +39,7 @@
 }
 
 .temps {
-  padding-left: 2em;
+  padding-left: 1.3em;
   display: flex;
-  width: 5em;
   flex-direction: column;
 }

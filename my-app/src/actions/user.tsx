@@ -1,12 +1,18 @@
 export const CHANGE_FIELD = 'CHANGE_FIELD';
 export const CHECK_ZIPCODE = 'CHECK_ZIPCODE';
 export const CHECK_AUTHENT = 'CHECK_AUTHENT';
+export const AUTHENT_SUCCESS = 'AUTHENT_SUCCESS';
 
-export function actionChangeField(inputName:any, newValue:any) {
+
+/*
+* @param {string} newValue : la nouvelle valeur de l'input
+* @param {string} inputName : le nom du champs dans le state
+* @return {object} action
+*/
+export function actionChangeField(newValue:string) {
   return {
     type: CHANGE_FIELD,
     payload: {
-      inputName,
       newValue,
     },
   };
@@ -24,6 +30,18 @@ export function actionCheckZipCode(zipCode:string) {
     type: CHECK_ZIPCODE,
     payload: {
       zipCode,
+    },
+  };
+}
+
+export function actionAuthentSuccess(temperature:any, icon:any, desc:any, city:string) {
+  return {
+    type: AUTHENT_SUCCESS,
+    payload: {
+      temperature,
+      icon,
+      desc,
+      city,
     },
   };
 }

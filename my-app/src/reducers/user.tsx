@@ -1,13 +1,13 @@
 import {
-  CHANGE_FIELD, CHECK_AUTHENT, CHECK_ZIPCODE,
+  AUTHENT_SUCCESS,
+  CHANGE_FIELD, CHECK_AUTHENT,
 } from '../actions/user';
 
 export const initialState = {
-  logged: false,
   zipCode: '',
 };
 
-const reducer = (state = initialState, action= {}) => {
+const reducer = (state = initialState, action:any ) => {
   switch (action.type) {
     case CHECK_AUTHENT:
       return state;
@@ -15,15 +15,22 @@ const reducer = (state = initialState, action= {}) => {
     case CHANGE_FIELD:
       return {
         ...state,
-        [action.payload.inputName]: action.payload.newValue,
+        zipCode: action.payload.newValue,
       };
 
-      case CHECK_ZIPCODE:
+      case AUTHENT_SUCCESS:
+        /*
+        on met à jour isLogged dans le state
+        et on sauvegarde le pseudo
+        et on vide les inputs
+        */
         return {
           ...state,
-          logged: true,
-          zipCode: action.payload,
-          message: `${action.payload.pseudo}`,
+          temperature: action.payload.temperature,
+          icon: action.payload.icon,
+          desc: action.payload.desc,
+          message: `Voici le resulta pour ${action.payload.zipCode}`,
+
         };
 
     default:
