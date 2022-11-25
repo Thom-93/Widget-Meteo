@@ -5,6 +5,8 @@ import {
 
 export const initialState = {
   zipCode: '',
+  isLoaded: false,
+
 };
 
 const reducer = (state = initialState, action:any ) => {
@@ -20,12 +22,11 @@ const reducer = (state = initialState, action:any ) => {
 
       case AUTHENT_SUCCESS:
         /*
-        on met à jour isLogged dans le state
-        et on sauvegarde le pseudo
-        et on vide les inputs
+        on met à jour le state
         */
         return {
           ...state,
+          isLoaded: true,
           zipCodeFix: action.payload.zipCodeFix,
           city: action.payload.city,
           temperature: action.payload.temperature,
