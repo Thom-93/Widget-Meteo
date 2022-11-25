@@ -11,6 +11,9 @@ function Form({ zipCode , changeField, }:{ zipCode:string; changeField:any; }) {
     event.preventDefault();
     dispatch(actionCheckAuthent());
   };
+  const clickEffect = () => {
+
+  }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -20,7 +23,7 @@ function Form({ zipCode , changeField, }:{ zipCode:string; changeField:any; }) {
       onChange={changeField}
       />
 
-      <button className="buttonZipCode" type="submit" >Envoyé</button>
+      <button className="buttonZipCode" onClick={clickEffect} type="submit" >Envoyé</button>
     </form>
   );
 }
