@@ -32,7 +32,6 @@ function App() {
         zipCode={zipCode}
         changeField={(newValue: string) => {
           dispatch(actionChangeField(newValue));
-          console.log('j\'ecris', newValue)
         }}
       />
     </div>
