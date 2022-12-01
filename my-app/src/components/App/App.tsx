@@ -1,4 +1,3 @@
-/* import React, { useState } from 'react'; */
 import { useDispatch, useSelector } from 'react-redux';
 import { actionChangeField } from '../../actions/user';
 import Form from '../Form/Form';
@@ -29,8 +28,6 @@ function App() {
             <MeteoWidget city={city} zipCode={zipCodeFix} temperature={temperature} icon={icon} desc={desc} />
           </section>
       )}
-
-
       <Form
         zipCode={zipCode}
         changeField={(newValue: string) => {
