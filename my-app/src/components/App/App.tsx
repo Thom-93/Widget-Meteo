@@ -14,7 +14,7 @@ function App() {
   const temperature = useSelector((state: any) => state.user.temperature);
   const icon = useSelector((state: any) => state.user.icon);
   const desc = useSelector((state: any) => state.user.desc);
-
+  
   return (
     <div className="App">
       {!isLoaded ? <Loader /> : (
