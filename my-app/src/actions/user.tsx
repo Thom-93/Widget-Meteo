@@ -1,6 +1,7 @@
 export const CHANGE_FIELD = 'CHANGE_FIELD';
 export const CHECK_AUTHENT = 'CHECK_AUTHENT';
 export const AUTHENT_SUCCESS = 'AUTHENT_SUCCESS';
+export const AUTHENT_ERROR = 'AUTHENT_ERROR';
 
 export function actionChangeField(newValue:string) {
   return {
@@ -14,6 +15,16 @@ export function actionChangeField(newValue:string) {
 export function actionCheckAuthent() {
   return {
     type: CHECK_AUTHENT,
+  };
+}
+
+/**
+ * Action qui demande au reducer d'enregistrer un message d'erreur dans le state
+ * @return Object d'action
+ */
+ export function actionSetAuthentError() {
+  return {
+    type: AUTHENT_ERROR,
   };
 }
 

@@ -3,11 +3,11 @@ import { actionCheckAuthent } from '../../actions/user';
 import Field from './Field/Field';
 import './styles.scss'
 
-function Form({ zipCode , changeField, }:{ zipCode:string; changeField:any; }) {
+function Form({ zipCode, changeField, searchMessage, isLoaded, }: { zipCode: string; changeField: Function; searchMessage: any; isLoaded: boolean;}) {
   const dispatch = useDispatch();
 
 
-  const handleSubmit = (event:any) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     dispatch(actionCheckAuthent());
   };
@@ -15,16 +15,22 @@ function Form({ zipCode , changeField, }:{ zipCode:string; changeField:any; }) {
 
   }
 
-  return (
-    <form className="form" onSubmit={handleSubmit}>
-      <p className="pZipCode">Code Postal :</p>
-      <Field 
-      value={zipCode}
-      onChange={changeField}
-      />
 
-      <button className="buttonZipCode" onClick={clickEffect} type="submit" >Envoyé</button>
-    </form>
+  return (
+    <div>
+      <form className="form" onSubmit={handleSubmit}>
+        <p className="pZipCode">Code Postal :</p>
+        <Field
+          value={zipCode}
+          onChange={changeField}
+        />
+
+        <button className="buttonZipCode" onClick={clickEffect} type="submit" >Envoyé</button>
+      </form>
+      <p className={isLoaded ? 'searchDone' : 'searchError'} >
+        {searchMessage}
+      </p>
+    </div>
   );
 }
 

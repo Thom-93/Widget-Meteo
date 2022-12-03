@@ -27,12 +27,15 @@
     font-size: 2em;
     font-weight: bold;
   }
-}
 
-.meteo:hover {
-  transform: scale(1.1);
-}
+  &:hover{
+    transform: scale(1.1);
+  }
 
+  &:focus{
+    color: red;
+  }
+}
 
 .meteo p {
   margin-bottom: 0em;

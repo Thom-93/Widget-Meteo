@@ -10,6 +10,7 @@ interface meteoWidgetProps {
 
 function MeteoWidget({ city, zipCode, temperature, icon, desc }: meteoWidgetProps) {
 
+
   return (
     <div className="meteo">
       <div>

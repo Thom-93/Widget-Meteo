@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import {
   actionAuthentSuccess,
+  actionSetAuthentError,
   CHECK_AUTHENT,
 } from '../../actions/user';
 
@@ -18,7 +19,7 @@ const authMiddelware = (store:any) => (next:any) => async (action:any) => {
         store.dispatch(actionAuthentSuccess(tempRound, response.data.weather[0].icon, response.data.weather[0].description, response.data.name, user.zipCode,))
       }).catch((error) => {
         console.log(error);
-        /* store.dispatch(actionSetAuthentError()); */
+        store.dispatch(actionSetAuthentError());
       });
 
       break;

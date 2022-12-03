@@ -1,4 +1,5 @@
 import {
+  AUTHENT_ERROR,
   AUTHENT_SUCCESS,
   CHANGE_FIELD, CHECK_AUTHENT,
 } from '../actions/user';
@@ -32,9 +33,15 @@ const reducer = (state = initialState, action:any ) => {
           temperature: action.payload.temperature,
           icon: action.payload.icon,
           desc: action.payload.desc,
-          message: `Voici le resulta pour ${action.payload.zipCode}`,
+          message: `Voici le resultat pour ${action.payload.zipCodeFix}`,
 
         };
+        case AUTHENT_ERROR:
+          return {
+            ...state,
+            isLoaded: false,
+            message: 'Code postal invalide !',
+          };
 
     default:
       return state;

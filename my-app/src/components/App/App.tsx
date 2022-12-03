@@ -14,7 +14,8 @@ function App() {
   const temperature = useSelector((state: any) => state.user.temperature);
   const icon = useSelector((state: any) => state.user.icon);
   const desc = useSelector((state: any) => state.user.desc);
-  
+  const message = useSelector((state: any) => state.user.message);
+
   return (
     <div className="App">
       {!isLoaded ? <Loader /> : (
@@ -29,6 +30,8 @@ function App() {
           </section>
       )}
       <Form
+        isLoaded={isLoaded}
+        searchMessage={message}
         zipCode={zipCode}
         changeField={(newValue: string) => {
           dispatch(actionChangeField(newValue));
@@ -39,3 +42,4 @@ function App() {
 }
 
 export default App;
+

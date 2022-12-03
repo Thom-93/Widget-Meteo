@@ -20,3 +20,17 @@ form {
       transform: scale(0.9);
     }
 }
+
+.searchDone, .searchError {
+  text-align: center;
+  text-shadow: .0em .0em .0em rgb(0, 0, 0);
+  font-family: serif;
+}
+
+.searchDone {
+  color: rgb(22, 186, 22);
+}
+
+.searchError {
+  color: rgb(206, 32, 32);
+}

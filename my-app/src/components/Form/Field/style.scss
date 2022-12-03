@@ -4,11 +4,12 @@
   text-align: center;
   border-bottom-style: double;
   margin-left: .5em;
+
   &:focus {
     border: none;
   }
-}
 
-.inputZipCode::placeholder {
-  color: white;
+  &-placeholder {
+    color: white;
+  }
 }
