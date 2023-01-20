@@ -1,19 +1,21 @@
 import axios from 'axios';
+import { Middleware } from 'redux';
 
 import {
   actionAuthentSuccess,
   actionSetAuthentError,
   CHECK_AUTHENT,
 } from '../../actions/user';
+import API_KEY from '../../API';
 
-const authMiddelware = (store:any) => (next:any) => async (action:any) => {
-  const API_KEY = 'f6888798e89c7be738a22c0619eb2a14';
+const authMiddelware: Middleware = (store) => (next) => async (action) => {
+  
   switch (action.type) {
     case CHECK_AUTHENT: {
       const { user } = store.getState();
-
+      const API = API_KEY;
       axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?zip=${user.zipCode},fr&appid=${API_KEY}&units=metric&lang=fr`,
+        `https://api.openweathermap.org/data/2.5/weather?zip=${user.zipCode},fr&appid=${API}&units=metric&lang=fr`,
       ).then((response) => {
         const tempRound = Math.round(response.data.main.temp);
         store.dispatch(actionAuthentSuccess(tempRound, response.data.weather[0].icon, response.data.weather[0].description, response.data.name, user.zipCode,))

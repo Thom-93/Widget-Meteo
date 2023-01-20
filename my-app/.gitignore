@@ -11,6 +11,9 @@
 # production
 /build
 
+# API
+API.tsx
+
 # misc
 .DS_Store
 .env.local
