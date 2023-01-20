@@ -1,6 +1,11 @@
 import { combineReducers } from 'redux';
 
-import userReducer from './user';
+import userReducer, { UserReducer } from './user';
+
+export interface GlobalState {
+  user: UserReducer;
+}
+
 
 const rootReducer = combineReducers({
   user: userReducer,

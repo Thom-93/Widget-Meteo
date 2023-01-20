@@ -4,10 +4,26 @@ import {
   CHANGE_FIELD, CHECK_AUTHENT,
 } from '../actions/user';
 
-export const initialState = {
+export interface UserReducer {
+  isLoaded: boolean;
+  zipCode: number | string;
+  zipCodeFix: number | string;
+  message: string;
+  city: string;
+  temperature: number;
+  desc: string;
+  icon: string;
+} 
+
+export const initialState: UserReducer = {
   zipCode: '',
   isLoaded: false,
-
+  zipCodeFix: '',
+  message: '',
+  city: '',
+  temperature: 0,
+  desc: '',
+  icon: ''
 };
 
 const reducer = (state = initialState, action:any ) => {

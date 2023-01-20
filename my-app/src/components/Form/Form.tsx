@@ -3,7 +3,7 @@ import { actionCheckAuthent } from '../../actions/user';
 import Field from './Field/Field';
 import './styles.scss'
 
-function Form({ zipCode, changeField, searchMessage, isLoaded, }: { zipCode: string; changeField: Function; searchMessage: any; isLoaded: boolean;}) {
+function Form({ zipCode, changeField, searchMessage, isLoaded, }: { zipCode: number |string; changeField: Function; searchMessage: string; isLoaded: boolean;}) {
   const dispatch = useDispatch();
 
 

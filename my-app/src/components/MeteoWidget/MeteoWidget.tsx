@@ -2,10 +2,10 @@ import './styles.scss';
 
 interface meteoWidgetProps {
   city: string,
-  zipCode: string,
-  temperature: any,
-  icon: any,
-  desc: any,
+  zipCode: number |string,
+  temperature: number,
+  icon: string,
+  desc: string,
 };
 
 function MeteoWidget({ city, zipCode, temperature, icon, desc }: meteoWidgetProps) {

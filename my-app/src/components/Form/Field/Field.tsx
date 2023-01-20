@@ -1,6 +1,6 @@
 import './style.scss'
 
-function Field({ value, onChange}:{value:string; onChange:any;}) {
+function Field({ value, onChange}:{value:number |string; onChange:any;}) {
   const handleChange = (evt:any) => {
     onChange(evt.target.value);
   };

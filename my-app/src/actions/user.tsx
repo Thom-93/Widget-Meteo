@@ -28,7 +28,7 @@ export function actionCheckAuthent() {
   };
 }
 
-export function actionAuthentSuccess(temperature:number, icon:any, desc:string, city:string, zipCodeFix:string,) {
+export function actionAuthentSuccess(temperature:number, icon:string, desc:string, city:string, zipCodeFix:string,) {
   return {
     type: AUTHENT_SUCCESS,
     payload: {
