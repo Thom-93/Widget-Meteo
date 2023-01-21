@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { actionChangeField } from '../../actions/user';
 import { GlobalState } from '../../reducers';
+import logo from '../../assets/icon/cloud-name-icon.png';
 import Form from '../Form/Form';
 import Loader from '../Loader/Loader';
 import MeteoWidget from '../MeteoWidget/MeteoWidget';
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <img src={logo} className='topLogo' alt="logo Thomas Weather" />
       {!isLoaded ? <Loader /> : (
             <section className='sectionMeteoWidget'>
             <MeteoWidget city={city} zipCode={zipCodeFix} temperature={temperature} icon={icon} desc={desc} />

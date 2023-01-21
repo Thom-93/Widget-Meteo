@@ -2,7 +2,7 @@
   width: 10.93em;
   height: 5em;
   display: block;
-  margin: 15em auto 1em;
+  margin: 9em auto 1em;
   background-image: 
     radial-gradient(circle 1.56em, #FFF 99%, transparent 0), 
     radial-gradient(circle 3.5em, #FFF 90%, transparent 0),
@@ -13,6 +13,7 @@
   background-repeat: no-repeat;
   position: relative;
   box-sizing: border-box;
+  animation: moveClouds 10s linear infinite;
 }
 
 // safari compatibility, at is not compatible  
@@ -45,8 +46,33 @@
   }
 } 
 
+@keyframes moveClouds {
+  0% {
+    filter: brightness(100%) contrast(100%) saturate(100%);
+  }
+  20% {
+    filter: brightness(160%) contrast(70%) saturate(40%);
+  }
+  40% {
+    filter: brightness(180%) contrast(60%) saturate(20%);
+  }
+  60% {
+    filter: brightness(200%) contrast(50%) saturate(0%);
+  }
+  80% {
+    filter: brightness(180%) contrast(60%) saturate(20%);
+  }
+  80% {
+    filter: brightness(140%) contrast(80%) saturate(80%);
+  }
+  100% {
+    filter: brightness(100%) contrast(100%) saturate(100%);
+  }
+}
+
 .pLoader {
   color: white;
   text-align: center;
   margin-bottom: 10em ;
 }
+
