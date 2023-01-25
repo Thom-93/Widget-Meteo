@@ -1,7 +1,7 @@
 import {
   AUTHENT_ERROR,
   AUTHENT_SUCCESS,
-  CHANGE_FIELD, CHECK_AUTHENT,
+  CHANGE_FIELD, CHECK_AUTHENT, TOGGLE_NEEDINFO,
 } from '../actions/user';
 
 export interface UserReducer {
@@ -13,6 +13,7 @@ export interface UserReducer {
   temperature: number;
   desc: string;
   icon: string;
+  needInfo: boolean;
 } 
 
 export const initialState: UserReducer = {
@@ -23,13 +24,23 @@ export const initialState: UserReducer = {
   city: '',
   temperature: 0,
   desc: '',
-  icon: ''
+  icon: '',
+  needInfo: false,
 };
 
 const reducer = (state = initialState, action:any ) => {
   switch (action.type) {
+    case TOGGLE_NEEDINFO:
+      return {
+        ...state,
+        needInfo: !state.needInfo,
+      };
+
     case CHECK_AUTHENT:
-      return state;
+      return {
+        ...state,
+        isLoaded:false,
+      };
 
     case CHANGE_FIELD:
       return {
@@ -50,7 +61,6 @@ const reducer = (state = initialState, action:any ) => {
           icon: action.payload.icon,
           desc: action.payload.desc,
           message: `Voici le resultat pour ${action.payload.zipCodeFix}`,
-
         };
         case AUTHENT_ERROR:
           return {

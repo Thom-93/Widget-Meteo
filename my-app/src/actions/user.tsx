@@ -2,6 +2,18 @@ export const CHANGE_FIELD = 'CHANGE_FIELD';
 export const CHECK_AUTHENT = 'CHECK_AUTHENT';
 export const AUTHENT_SUCCESS = 'AUTHENT_SUCCESS';
 export const AUTHENT_ERROR = 'AUTHENT_ERROR';
+export const TOGGLE_NEEDINFO = 'TOGGLE_NEEDINFO';
+
+
+/**
+ * Turn in true or false the toggleInfo in state.user
+ * @returns Object Action
+ */
+ export function actionToggleNeedInfo() {
+  return {
+    type: TOGGLE_NEEDINFO,
+  };
+}
 
 export function actionChangeField(newValue:string) {
   return {

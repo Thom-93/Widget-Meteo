@@ -3,7 +3,14 @@ import { actionCheckAuthent } from '../../actions/user';
 import Field from './Field/Field';
 import './styles.scss'
 
-function Form({ zipCode, changeField, searchMessage, isLoaded, }: { zipCode: number |string; changeField: Function; searchMessage: string; isLoaded: boolean;}) {
+interface FormProps {
+  zipCode: number |string,
+  changeField: Function,
+  searchMessage: string,
+  isLoaded: boolean,
+};
+
+function Form({ zipCode, changeField, searchMessage, isLoaded, }: FormProps) {
   const dispatch = useDispatch();
 
 
@@ -11,10 +18,6 @@ function Form({ zipCode, changeField, searchMessage, isLoaded, }: { zipCode: num
     event.preventDefault();
     dispatch(actionCheckAuthent());
   };
-  const clickEffect = () => {
-
-  }
-
 
   return (
     <div>
@@ -25,7 +28,7 @@ function Form({ zipCode, changeField, searchMessage, isLoaded, }: { zipCode: num
           onChange={changeField}
         />
 
-        <button className="buttonZipCode" onClick={clickEffect} type="submit" >Envoyé</button>
+        <button className="buttonZipCode" type="submit" >Envoyé</button>
       </form>
       <p className={isLoaded ? 'searchDone' : 'searchError'} >
         {searchMessage}
