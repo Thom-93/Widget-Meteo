@@ -62,9 +62,6 @@ function App() {
           <div id="moins" className="circle-plus" onClick={decreaseTab}>
             <div className="plus"></div>
           </div>
-          <div className="circle-plus" onClick={increaseTab}>
-            <div className="plus"></div>
-          </div>
         </section>
       )}
       <Form

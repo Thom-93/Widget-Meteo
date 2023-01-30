@@ -1,6 +1,6 @@
 .Header__Info {
   display: flex;
-  background-color: white;
+  background-color: rgba(222, 222, 222, 0.931);
   position: fixed;
   width: 85%;
   height: 34%;
@@ -12,6 +12,10 @@
   align-items: center;
   text-align: center;
   border-radius: 1rem;
+}
+
+.FtSizeS {
+  font-size: 0.9rem;
 }
 
 .Header__Info--InfoImg {
@@ -56,6 +60,10 @@
   
   .Header__Info--InfoImg {
     width: 5%;
+  }
+
+  .FtSizeS {
+    font-size: initial;
   }
 
 }

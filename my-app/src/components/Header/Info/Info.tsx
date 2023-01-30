@@ -12,9 +12,11 @@ function Info({ logoInfo }:{ logoInfo:string }) {
     <div className="Header__Info">
     <img src={logoInfo} className="Header__Info--InfoImg" alt="bulle d'information" />
     <button className="Header__Info__Btn--Close" onClick={handleCloseInfo}>x</button>
+      <span className="Header__Info--Span1 FtSizeS">
+        - Entrer une adresse postal ajoutera une autre ville
+      </span>
       <span className="Header__Info--Span1">
-        - Vous avez la possibiliter de tout remettre a zero en refaichissant ou en
-        cliquant sur le logo "Thomas Weather" situer en haut a gauche du site
+        - Pour tout remettre a zero actualiser la page
       </span>
     </div>
     </div>
