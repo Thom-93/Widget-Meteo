@@ -8,3 +8,7 @@ Allez !
 1. On se code un truc sympa
 2. On fait le build
 3. On le met en ligne
+
+# V1 https://meteo-of-thoms.surge.sh/ 
+
+# V2 https://thomas-weather.surge.sh/
