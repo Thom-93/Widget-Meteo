@@ -1,4 +1,4 @@
-# Widget Météo 
+# Widget Météo
 
 Tu viens de découvrir une solution plug and play pour commencer un projet React ?  
 Tu veux montrer au monde entier ce dont tu es capable ?
